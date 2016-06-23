@@ -17,6 +17,7 @@ defmodule Blog.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/sketches", SketchController , only: [:index, :show]
   end
 
   # Other scopes may use custom stacks.

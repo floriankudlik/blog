@@ -1,0 +1,23 @@
+<h2>Show sketch</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @sketch.title %>
+  </li>
+
+  <li>
+    <strong>Link:</strong>
+    <%= @sketch.link %>
+  </li>
+
+  <li>
+    <strong>Text:</strong>
+    <%= @sketch.text %>
+  </li>
+
+</ul>
+
+<%=# link "Edit", to: sketch_path(@conn, :edit, @sketch) %>
+<%= link "Back", to: sketch_path(@conn, :index) %>

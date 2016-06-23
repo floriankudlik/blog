@@ -1,0 +1,30 @@
+<h2>Listing sketches</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Link</th>
+      <th>Text</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for sketch <- @sketches do %>
+    <tr>
+      <td><%= sketch.title %></td>
+      <td><%= sketch.link %></td>
+      <td><%= sketch.text %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: sketch_path(@conn, :show, sketch), class: "btn btn-default btn-xs" %>
+        <%=# link "Edit", to: sketch_path(@conn, :edit, sketch), class: "btn btn-default btn-xs" %>
+        <%=# link "Delete", to: sketch_path(@conn, :delete, sketch), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%=# link "New sketch", to: sketch_path(@conn, :new) %>
